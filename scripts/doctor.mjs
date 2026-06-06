@@ -1,14 +1,25 @@
 import { execFileSync } from "node:child_process";
 import { existsSync } from "node:fs";
 
-const required = ["README.md", "quickstart/Program.cs", "docs/STAR.md", "docs/API_WALKTHROUGH.md", "fixtures/public"];
+const required = [
+  "README.md",
+  "quickstart/Program.cs",
+  "quickstart/quickstart.csproj",
+  "docs/STAR.md",
+  "docs/USER_GUIDE.md",
+  "docs/RUNTIME_GUIDE.md",
+  "docs/API_REFERENCES.md",
+  "docs/EXPECTED_OUTCOME.md",
+  "fixtures/public",
+  "native/microstation-dotnet/CadGuardianDgnAudit.cs",
+  "native/microstation-python/dgn_package_audit.py"
+];
 const missing = required.filter((file) => !existsSync(file));
 
 console.log("MicroStation DGN Workflow Quick-Start Kit");
-console.log("Kit type: CAD Guardian quick-start automation kit");
-console.log("C# quickstart: quickstart/");
-console.log("Native examples: optional licensed runtime adapters");
-console.log("Development preview: This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.");
+console.log("Kit type: CAD Guardian Pareto quick-start automation kit");
+console.log("Business impact: " + "Name seed files, levels, cells, references, and export risk before DGN conversion or automation spreads across infrastructure workflows.");
+console.log("Development preview: " + "This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.");
 
 try {
   const dotnet = execFileSync("dotnet", ["--version"], { encoding: "utf8" }).trim();

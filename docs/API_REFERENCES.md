@@ -1,7 +1,22 @@
 # API References
 
-- [Bentley MicroStation DGN Concepts](https://developer.bentley.com/documentation/microstation-python-api/pdf/04-MicroStationPython_Dgn_Concepts_API_Overview.pdf) - DGN, model, element, level, and file-concept vocabulary.
-- [AWS API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) - API front door, job status, and artifact routes.
-- [AWS Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) - State-machine orchestration, retries, and exception routing.
-- [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) - Event-driven job functions when the platform standard is Azure.
-- [Azure Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview) - Queue-backed CAD work and service-bus vocabulary.
+## Signals used in this kit
+
+- DgnFile
+- DgnModel
+- ModelRef
+- Element
+- Level
+- Cell
+- Reference attachment
+- Seed file
+- Export package
+- MicroStation Python
+
+## Official references
+
+- [Bentley MicroStation DGN Concepts](https://developer.bentley.com/documentation/microstation-python-api/pdf/04-MicroStationPython_Dgn_Concepts_API_Overview.pdf)
+- [AWS API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
+- [AWS Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html)
+- [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- [Azure Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)

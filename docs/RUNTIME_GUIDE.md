@@ -2,15 +2,20 @@
 
 ## Public runtime
 
-- Node.js for repo verification and synthetic demo.
-- .NET 10 for the C# quickstart.
-- No licensed CAD software required.
+The default kit runs with local .NET and does not require licensed CAD software.
 
-## Optional native runtime
+```bash
+dotnet run --project quickstart
+```
+
+## Native runtime
 
 Use C# for package readiness, then a MicroStation-native adapter only after seed, level, reference, and export policy are accepted.
 
-## Native/API examples
+Native examples are intentionally optional. They should be used only inside the matching licensed CAD environment after the package boundary is proven.
 
-- native/microstation-python/dgn_package_audit.py
-- native/microstation-dotnet/CadGuardianDgnAudit.cs
+## Native handoff points
+
+- **Seed file inventory:** `DgnFile`, `DgnModel`, and seed-file policy in a MicroStation-native runtime.
+- **Level, cell, and reference boundary:** `Level`, `Cell`, element traversal, and reference attachment checks.
+- **Export package risk:** MicroStation Python or SDK adapter once export policy is accepted.
