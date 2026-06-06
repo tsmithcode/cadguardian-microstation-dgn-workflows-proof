@@ -10,6 +10,14 @@ CAD Guardian Pareto quick-start automation kit for drafters, CAD automation peer
 
 > This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
 
+## Live site
+
+- GitHub Pages: https://tsmithcode.github.io/cadguardian-microstation-dgn-workflows-proof/
+- Download ZIP: https://github.com/tsmithcode/cadguardian-microstation-dgn-workflows-proof/archive/refs/heads/main.zip
+- CAD Guardian: https://www.cadguardian.com/
+- TSmithCode.ai: https://www.tsmithcode.ai/
+- Service page: https://www.cadguardian.com/services/microstation-dgn-workflows
+
 ## Why this exists
 
 Name seed files, levels, cells, references, and export risk before DGN conversion or automation spreads across infrastructure workflows.
@@ -65,7 +73,3 @@ dotnet build quickstart
 ## Public fixture boundary
 
 Only approved public sample files are bundled. No client files, private drawings, credentials, raw opportunity notes, or license-uncertain CAD assets are included.
-
-## Service page
-
-https://www.cadguardian.com/services/microstation-dgn-workflows
