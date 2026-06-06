@@ -1,70 +1,66 @@
-# MicroStation DGN Workflow Readiness Proof
+# MicroStation DGN Workflow Quick-Start Kit
 
-CAD Guardian proof repo for technical interviews, buyer reviews, and peer walkthroughs.
+CAD Guardian quick-start automation kit for peer walkthroughs, technical interviews, and buyer-facing business-case discussions.
 
 > This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
 
-## Story
-A civil or infrastructure CAD team needs DGN workflow help, but seed files, levels, cells, references, exports, and package expectations need to be named first.
+## STAR story
 
-## Business case
-The right proof is a readiness map and package-validation posture before conversion or automation decisions spread.
+**Situation:** A civil or infrastructure CAD team needs DGN help, but seed files, levels, cells, references, and exports are not clearly governed.
 
-## Workflow
-- DGN package request
-- Seed and reference inventory
-- Level/cell standards map
-- Catalog-only DGN references
-- Export/package policy
-- Exception report
-- Reviewer signoff
-- Next readiness decision
+**Task:** Create a public-safe quickstart that names package readiness before conversion or automation spreads across DGN workflows.
 
-## Stack vocabulary
-- MicroStation
-- DGN
-- levels
-- cells
-- references
-- seed files
-- exports
+**Action:** Bundle approved GDAL DGN fixtures, validate seed/reference expectations, and show MicroStation DGN vocabulary through Python and .NET-style adapter examples.
 
-## Run
+**Result:** Peers can run the package check, inspect export risk, and discuss the native MicroStation runtime boundary with concrete terms.
+
+## Fast run
 
 ```bash
 npm run doctor
 npm run verify
 npm run demo
-npm run sanitize
+dotnet build quickstart
+dotnet run --project quickstart
 ```
 
-Expected demo output: `reports/demo-validation-report.json` with a review-ready status, validation checks, stop conditions, and the public CAD data boundary.
+The C# quickstart writes `reports/quickstart-report.json`. The Node demo writes `reports/demo-validation-report.json`.
 
-## Runtime model
-This repo is tiered:
+## What is included
 
-- Public demo: runs anywhere with Node.js and synthetic fixtures.
-- Optional native/runtime check: `npm run runtime:check` reports whether local CAD/API tooling appears available.
-- Real CAD files: stay in an AgentOps-controlled private library unless explicitly approved for a private runtime receipt.
+- Runnable C# quickstart in `quickstart/`.
+- Optional native/runtime examples in `native/`.
+- Safe public fixtures in `fixtures/public/`.
+- STAR story, API walkthrough, native runtime notes, interview script, and expected outcome docs.
 
-## Guides
-- [User guide](docs/USER_GUIDE.md)
-- [Runtime guide](docs/RUNTIME_GUIDE.md)
-- [API references](docs/API_REFERENCES.md)
-- [Expected outcome](docs/EXPECTED_OUTCOME.md)
-- [Development preview warning](docs/DEVELOPMENT_PREVIEW.md)
+## Workflow
 
-## Official references
-- [Bentley MicroStation DGN Concepts](https://developer.bentley.com/documentation/microstation-python-api/pdf/04-MicroStationPython_Dgn_Concepts_API_Overview.pdf) - DGN, model, element, level, and file-concept vocabulary.
-- [AWS API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) - API front door, status endpoints, and service boundary discussion.
-- [AWS Step Functions](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) - State-machine orchestration, retries, and staged workflow discussion.
-- [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) - Event-driven job/API shape when the platform standard is Azure.
-- [Azure Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview) - Queue and service-bus vocabulary for async CAD work.
+- DGN package request
+- Seed fixture inventory
+- Level and cell check
+- Reference policy check
+- Export risk check
+- MicroStation runtime boundary
+- Reviewer signoff
+- Next readiness decision
 
-## Public CAD data boundary
-GDAL MIT DGN samples stay catalog-controlled. This repo publishes source manifests, synthetic package rules, and validation posture.
+## API and runtime signals
 
-This repository is built for public proof. It includes source inventory manifests, synthetic input fixtures, validation examples, and adapter code shaped for walkthroughs. It does not include private drawings, proprietary project files, login material, raw opportunity notes, or native CAD files that AgentOps marks catalog-only.
+- DgnFile
+- DgnModel
+- ModelRef
+- Element
+- Level
+- Cell
+- Reference attachment
+- Seed file
+- Export package
+- MicroStation Python
 
-## Related service page
+## Public fixture boundary
+
+Only approved public sample files are bundled. No client files, private drawings, credentials, raw opportunity notes, or license-uncertain CAD assets are included.
+
+## Service page
+
 https://www.cadguardian.com/services/microstation-dgn-workflows

@@ -1,17 +1,31 @@
 {
-  "requestId": "cadg-dgn-demo-001",
-  "packageClass": "demo-dgn-reference-package",
-  "runtimeDecision": "Readiness and validation package before DGN conversion, automation, or migration.",
-  "expectedOutputs": [
-    "level checklist",
-    "reference inventory",
-    "package manifest",
-    "export risk report"
+  "requestId": "cadg-dgn-kit-001",
+  "workflowClass": "microstation-dgn-package-readiness",
+  "runtimeDecision": "Use C# for package readiness, then a MicroStation-native adapter only after seed, level, reference, and export policy are accepted.",
+  "reviewOwner": "civil CAD lead",
+  "kitType": "CAD Guardian quick-start automation kit",
+  "apiSignals": [
+    "DgnFile",
+    "DgnModel",
+    "ModelRef",
+    "Element",
+    "Level",
+    "Cell",
+    "Reference attachment",
+    "Seed file",
+    "Export package",
+    "MicroStation Python"
   ],
   "validationRules": [
-    "seed file named",
-    "levels mapped",
-    "references categorized",
-    "export exceptions listed"
+    "DGN fixtures are present and attributed",
+    "Seed file and package references are represented",
+    "Level/cell/export checks are represented",
+    "MicroStation native runtime handoff is documented"
+  ],
+  "expectedOutputs": [
+    "dgn-package-report",
+    "seed-file-receipts",
+    "export-risk-checks",
+    "native adapter notes"
   ]
 }

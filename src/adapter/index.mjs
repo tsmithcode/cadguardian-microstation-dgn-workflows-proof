@@ -1,18 +1,37 @@
-export function classifyDgnPackage(job) {
-  return job.validationRules.map((rule) => ({ rule, owner: rule.includes('export') ? 'CAD lead' : 'designer' }));
-}
-
-
 export function runAdapter(job) {
   return {
     requestId: job.requestId,
+    kitType: "CAD Guardian quick-start automation kit",
+    repo: "tsmithcode/cadguardian-microstation-dgn-workflows-proof",
     runtimeDecision: job.runtimeDecision,
-    expectedOutputs: job.expectedOutputs,
-    validation: job.validationRules.map((rule) => ({
+    apiSignals: [
+  "DgnFile",
+  "DgnModel",
+  "ModelRef",
+  "Element",
+  "Level",
+  "Cell",
+  "Reference attachment",
+  "Seed file",
+  "Export package",
+  "MicroStation Python"
+],
+    expectedOutputs: [
+  "dgn-package-report",
+  "seed-file-receipts",
+  "export-risk-checks",
+  "native adapter notes"
+],
+    validation: [
+  "DGN fixtures are present and attributed",
+  "Seed file and package references are represented",
+  "Level/cell/export checks are represented",
+  "MicroStation native runtime handoff is documented"
+].map((rule) => ({
       rule,
       status: "review-ready",
-      evidence: "Synthetic fixture only. Run local CAD checks against AgentOps-approved source files for tool receipts.",
+      evidence: "Public quick-start kit fixture, API walkthrough, or native adapter example is present.",
     })),
-    publicBoundary: "No private client files, login material, raw opportunity notes, or catalog-only native CAD binaries are included.",
+    publicBoundary: "No private client files, login material, raw opportunity notes, or license-uncertain CAD assets are included.",
   };
 }

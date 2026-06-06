@@ -1,72 +1,69 @@
 {
-  "schemaVersion": "cadg.public_proof_packet.1",
+  "schemaVersion": "cadg.quick_start_automation_kit.2",
+  "kitType": "CAD Guardian quick-start automation kit",
   "repo": "tsmithcode/cadguardian-microstation-dgn-workflows-proof",
-  "title": "MicroStation DGN Workflow Readiness Proof",
+  "title": "MicroStation DGN Workflow Quick-Start Kit",
   "servicePath": "https://www.cadguardian.com/services/microstation-dgn-workflows",
-  "story": "A civil or infrastructure CAD team needs DGN workflow help, but seed files, levels, cells, references, exports, and package expectations need to be named first.",
+  "star": {
+    "situation": "A civil or infrastructure CAD team needs DGN help, but seed files, levels, cells, references, and exports are not clearly governed.",
+    "task": "Create a public-safe quickstart that names package readiness before conversion or automation spreads across DGN workflows.",
+    "action": "Bundle approved GDAL DGN fixtures, validate seed/reference expectations, and show MicroStation DGN vocabulary through Python and .NET-style adapter examples.",
+    "result": "Peers can run the package check, inspect export risk, and discuss the native MicroStation runtime boundary with concrete terms."
+  },
   "workflow": [
     "DGN package request",
-    "Seed and reference inventory",
-    "Level/cell standards map",
-    "Catalog-only DGN references",
-    "Export/package policy",
-    "Exception report",
+    "Seed fixture inventory",
+    "Level and cell check",
+    "Reference policy check",
+    "Export risk check",
+    "MicroStation runtime boundary",
     "Reviewer signoff",
     "Next readiness decision"
   ],
-  "stack": [
-    "MicroStation",
-    "DGN",
-    "levels",
-    "cells",
-    "references",
-    "seed files",
-    "exports"
+  "apiSignals": [
+    "DgnFile",
+    "DgnModel",
+    "ModelRef",
+    "Element",
+    "Level",
+    "Cell",
+    "Reference attachment",
+    "Seed file",
+    "Export package",
+    "MicroStation Python"
   ],
-  "officialDocs": [
+  "runCommands": {
+    "full": "npm run kit",
+    "csharp": "dotnet run --project quickstart",
+    "node": "npm run demo"
+  },
+  "expectedOutputPath": "reports/quickstart-report.json",
+  "fixtures": [
     {
-      "label": "Bentley MicroStation DGN Concepts",
-      "url": "https://developer.bentley.com/documentation/microstation-python-api/pdf/04-MicroStationPython_Dgn_Concepts_API_Overview.pdf",
-      "use": "DGN, model, element, level, and file-concept vocabulary."
+      "source": "gdal_cad_dgn_dxf_samples/autotest/ogr/data/dgn/smalltest.dgn",
+      "destination": "fixtures/public/gdal/smalltest.dgn",
+      "sourceId": "gdal_cad_dgn_dxf_samples",
+      "license": "MIT-style GDAL project sample",
+      "attribution": "OSGeo GDAL test data",
+      "use": "DGN package-presence fixture.",
+      "tokens": [],
+      "bundledPath": "fixtures/public/gdal/smalltest.dgn",
+      "sizeBytes": 10752,
+      "sha256": "9d9faddb67216f9d56fc9a1027adc1a927c8c13529dfd3416b771b4dc4e9a284"
     },
     {
-      "label": "AWS API Gateway",
-      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
-      "use": "API front door, status endpoints, and service boundary discussion."
-    },
-    {
-      "label": "AWS Step Functions",
-      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html",
-      "use": "State-machine orchestration, retries, and staged workflow discussion."
-    },
-    {
-      "label": "Azure Functions",
-      "url": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview",
-      "use": "Event-driven job/API shape when the platform standard is Azure."
-    },
-    {
-      "label": "Azure Service Bus",
-      "url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview",
-      "use": "Queue and service-bus vocabulary for async CAD work."
+      "source": "gdal_cad_dgn_dxf_samples/ogr/ogrsf_frmts/dgn/data/seed_2d.dgn",
+      "destination": "fixtures/public/gdal/seed_2d.dgn",
+      "sourceId": "gdal_cad_dgn_dxf_samples",
+      "license": "MIT-style GDAL project sample",
+      "attribution": "OSGeo GDAL test data",
+      "use": "Seed-file conversation fixture.",
+      "tokens": [],
+      "bundledPath": "fixtures/public/gdal/seed_2d.dgn",
+      "sizeBytes": 9216,
+      "sha256": "dd8465f18569d9289809e9e0962115d365d0a56de021393952a5e7a0a20b527c"
     }
   ],
   "developmentPreviewWarning": "This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.",
-  "publicBoundary": "Public packet contains synthetic fixtures, source manifests, code scaffolds, and validation posture only.",
-  "agentOpsPolicy": {
-    "noSourceMutation": true,
-    "noCloudUploadOfRawCad": true,
-    "rawCadBinariesToAi": false,
-    "catalogOnlyFormats": [
-      ".dgn",
-      ".dwg",
-      ".iam",
-      ".idw",
-      ".ipt",
-      ".rfa",
-      ".rvt",
-      ".sldasm",
-      ".slddrw",
-      ".sldprt"
-    ]
-  }
+  "publicBoundary": "Public kit contains approved public fixtures, code examples, validation reports, and native adapter scaffolds only."
 }

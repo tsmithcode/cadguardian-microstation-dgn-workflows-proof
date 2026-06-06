@@ -1,0 +1,26 @@
+[
+  {
+    "source": "gdal_cad_dgn_dxf_samples/autotest/ogr/data/dgn/smalltest.dgn",
+    "destination": "fixtures/public/gdal/smalltest.dgn",
+    "sourceId": "gdal_cad_dgn_dxf_samples",
+    "license": "MIT-style GDAL project sample",
+    "attribution": "OSGeo GDAL test data",
+    "use": "DGN package-presence fixture.",
+    "tokens": [],
+    "bundledPath": "fixtures/public/gdal/smalltest.dgn",
+    "sizeBytes": 10752,
+    "sha256": "9d9faddb67216f9d56fc9a1027adc1a927c8c13529dfd3416b771b4dc4e9a284"
+  },
+  {
+    "source": "gdal_cad_dgn_dxf_samples/ogr/ogrsf_frmts/dgn/data/seed_2d.dgn",
+    "destination": "fixtures/public/gdal/seed_2d.dgn",
+    "sourceId": "gdal_cad_dgn_dxf_samples",
+    "license": "MIT-style GDAL project sample",
+    "attribution": "OSGeo GDAL test data",
+    "use": "Seed-file conversation fixture.",
+    "tokens": [],
+    "bundledPath": "fixtures/public/gdal/seed_2d.dgn",
+    "sizeBytes": 9216,
+    "sha256": "dd8465f18569d9289809e9e0962115d365d0a56de021393952a5e7a0a20b527c"
+  }
+]
