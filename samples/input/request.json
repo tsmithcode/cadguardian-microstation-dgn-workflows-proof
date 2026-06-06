@@ -1,0 +1,17 @@
+{
+  "requestId": "cadg-dgn-demo-001",
+  "packageClass": "demo-dgn-reference-package",
+  "runtimeDecision": "Readiness and validation package before DGN conversion, automation, or migration.",
+  "expectedOutputs": [
+    "level checklist",
+    "reference inventory",
+    "package manifest",
+    "export risk report"
+  ],
+  "validationRules": [
+    "seed file named",
+    "levels mapped",
+    "references categorized",
+    "export exceptions listed"
+  ]
+}

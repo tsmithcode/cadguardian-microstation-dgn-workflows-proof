@@ -1,0 +1,21 @@
+{
+  "policy": "GDAL MIT DGN samples stay catalog-controlled. This repo publishes source manifests, synthetic package rules, and validation posture.",
+  "filesAreBundled": false,
+  "reason": "AgentOps policy blocks raw CAD cloud upload. Public proof references approved library sources and uses synthetic fixtures.",
+  "sources": [
+    {
+      "sourceId": "gdal_cad_dgn_dxf_samples",
+      "relativePath": "raw/gdal_cad_dgn_dxf_samples/autotest/ogr/data/dgn/smalltest.dgn",
+      "format": "DGN",
+      "usage": "Catalog-only DGN reference.",
+      "publicUse": "No geometry claim without local GDAL/reader receipt."
+    },
+    {
+      "sourceId": "gdal_cad_dgn_dxf_samples",
+      "relativePath": "raw/gdal_cad_dgn_dxf_samples/ogr/ogrsf_frmts/dgn/data/seed_2d.dgn",
+      "format": "DGN",
+      "usage": "Seed-file conversation reference.",
+      "publicUse": "Reference only."
+    }
+  ]
+}

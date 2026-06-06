@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "cadg.public_proof_packet.1",
+  "repo": "tsmithcode/cadguardian-microstation-dgn-workflows-proof",
+  "title": "MicroStation DGN Workflow Readiness Proof",
+  "servicePath": "https://www.cadguardian.com/services/microstation-dgn-workflows",
+  "story": "A civil or infrastructure CAD team needs DGN workflow help, but seed files, levels, cells, references, exports, and package expectations need to be named first.",
+  "workflow": [
+    "DGN package request",
+    "Seed and reference inventory",
+    "Level/cell standards map",
+    "Catalog-only DGN references",
+    "Export/package policy",
+    "Exception report",
+    "Reviewer signoff",
+    "Next readiness decision"
+  ],
+  "stack": [
+    "MicroStation",
+    "DGN",
+    "levels",
+    "cells",
+    "references",
+    "seed files",
+    "exports"
+  ],
+  "publicBoundary": "Public packet contains synthetic fixtures, source manifests, code scaffolds, and validation posture only.",
+  "agentOpsPolicy": {
+    "noSourceMutation": true,
+    "noCloudUploadOfRawCad": true,
+    "rawCadBinariesToAi": false,
+    "catalogOnlyFormats": [
+      ".dgn",
+      ".dwg",
+      ".iam",
+      ".idw",
+      ".ipt",
+      ".rfa",
+      ".rvt",
+      ".sldasm",
+      ".slddrw",
+      ".sldprt"
+    ]
+  }
+}
