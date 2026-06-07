@@ -1,75 +1,108 @@
 <p align="left">
-  <a href="https://www.cadguardian.com/">
+  <a href="https://www.cadguardian.com/services/microstation-dgn-workflows">
     <img src="assets/cad-guardian-logo-highlighted.png" alt="CAD Guardian logo" width="120">
   </a>
 </p>
 
 # MicroStation DGN Workflow Quick-Start Kit
 
-CAD Guardian Pareto quick-start automation kit for drafters, CAD automation peers, technical interviews, and buyer-facing business-case discussions.
+Enterprise-facing public proof for CAD Guardian's [MicroStation DGN workflow service](https://www.cadguardian.com/services/microstation-dgn-workflows).
 
-> This CAD library is in development. This is an early public preview for feedback on the best business case, workflow shape, and proof path.
+This repo proves a small, inspectable DGN package-readiness workflow before a team exposes private drawings, licensed MicroStation runtimes, or production automation.
 
-## Live site
+Live proof page: [GitHub Pages](https://tsmithcode.github.io/cadguardian-microstation-dgn-workflows-proof/) | [Download ZIP](https://github.com/tsmithcode/cadguardian-microstation-dgn-workflows-proof/archive/refs/heads/main.zip) | [CAD Guardian](https://www.cadguardian.com/) | [TSmithCode.ai](https://www.tsmithcode.ai/)
 
-- GitHub Pages: https://tsmithcode.github.io/cadguardian-microstation-dgn-workflows-proof/
-- Download ZIP: https://github.com/tsmithcode/cadguardian-microstation-dgn-workflows-proof/archive/refs/heads/main.zip
-- CAD Guardian: https://www.cadguardian.com/
-- TSmithCode.ai: https://www.tsmithcode.ai/
-- Service page: https://www.cadguardian.com/services/microstation-dgn-workflows
+## Best for
 
-## Why this exists
+- Civil, infrastructure, plant, and facilities CAD teams that need a clearer DGN package boundary.
+- Evaluators who want proof around seed files, levels, cells, references, and export risk before a sales call.
+- CAD automation peers who need to see where local .NET checks stop and a MicroStation-native adapter begins.
 
-Name seed files, levels, cells, references, and export risk before DGN conversion or automation spreads across infrastructure workflows.
+## Decision this proves
 
-## Fast run
+Pick one DGN package class, name the seed/reference/export checks, then decide whether a MicroStation-native adapter is justified.
+
+The proof is intentionally narrow: it validates package-readiness signals with approved public fixtures and names the handoff into MicroStation Python or a .NET-style SDK adapter only after the public boundary is accepted.
+
+## Run locally
 
 ```bash
 npm run doctor
 npm run verify
 npm run demo
-dotnet build quickstart
+npm run quickstart:build
+npm run sanitize
 ```
 
-`npm run demo` runs the C# quickstart and writes `reports/quickstart-report.json`.
+`npm run demo` runs:
 
-## What is worth reusing
+```bash
+dotnet run --project quickstart
+```
 
-- `quickstart/Program.cs`: a small C# package-readiness engine with fixture receipts, Pareto checks, native runtime gates, and a JSON report.
-- `native/`: optional API/runtime examples for the licensed CAD environment.
-- `fixtures/public/`: approved public CAD fixtures only.
-- `docs/USER_GUIDE.md`: how to run and adapt the kit.
-- `docs/INTERVIEW_SCRIPT.md`: how to explain the business case without guessing.
+## Expected output
 
-## STAR story
+The demo writes:
 
-**Situation:** A civil or infrastructure CAD team needs DGN help, but seed files, levels, cells, references, and exports are not clearly governed.
+```text
+reports/quickstart-report.json
+```
 
-**Task:** Name package readiness before conversion or automation spreads across DGN workflows.
+The report includes:
 
-**Action:** Bundle public DGN fixtures, validate seed/reference expectations, and show MicroStation DGN vocabulary through Python and .NET-style adapter examples.
+- `Status`: `ready-for-private-sample` or `needs-review`.
+- `BusinessImpact`: why the DGN workflow proof exists.
+- `Fixtures`: approved public DGN fixture receipts with size, SHA-256, attribution, and runtime boundary.
+- `ParetoChecks`: seed file inventory; level, cell, and reference boundary; export package risk.
+- `ReusableRoutines`: small package-readiness routines that can be adapted after access is approved.
+- `ApiSignals`: `DgnFile`, `DgnModel`, `ModelRef`, `Element`, `Level`, `Cell`, reference attachments, seed files, export packages, and MicroStation Python.
 
-**Result:** A reviewer can run the package check, inspect export risk, and discuss the MicroStation runtime boundary with concrete terms.
+## Proof boundary
 
-## Pareto checks
+This repository demonstrates the first useful evaluator question: can the team name the DGN package boundary before automation spreads?
 
-- **Seed file inventory:** Prevents conversion or automation from drifting away from the seed file users expect. Handoff: `DgnFile`, `DgnModel`, and seed-file policy in a MicroStation-native runtime.
-- **Level, cell, and reference boundary:** Names the objects that usually make DGN work fail late in review. Handoff: `Level`, `Cell`, element traversal, and reference attachment checks.
-- **Export package risk:** Makes PDF/DWG/DGN export assumptions explicit before a civil CAD lead trusts automation. Handoff: MicroStation Python or SDK adapter once export policy is accepted.
+It covers:
 
-## API and runtime signals
+- Seed file inventory for DGN package conversations.
+- Level, cell, and reference boundary language for late-review failure points.
+- Export package risk for PDF/DWG/DGN handoffs.
+- Public fixture receipts that make the proof reproducible without exposing client CAD data.
 
-- DgnFile
-- DgnModel
-- ModelRef
-- Element
-- Level
-- Cell
-- Reference attachment
-- Seed file
-- Export package
-- MicroStation Python
+It does not claim to run licensed MicroStation APIs in public CI, inspect private DGN content, or certify production drawings.
+
+## What to send
+
+For a CAD Guardian review, send:
+
+- The generated `reports/quickstart-report.json`.
+- A short description of the DGN package class you want to govern.
+- The seed, level, cell, reference, and export assumptions that currently create review risk.
+- Whether the next step should stay in a local package-readiness check or move into a licensed MicroStation runtime.
+
+Do not send credentials, private drawings, raw opportunity notes, client names, or unapproved CAD fixtures in this public repo.
+
+## Related CAD Guardian page
+
+[MicroStation DGN Workflows](https://www.cadguardian.com/services/microstation-dgn-workflows)
+
+Use that service lane when the decision involves DGN standards, seed file policy, reference attachment checks, export readiness, or MicroStation-native automation planning.
+
+## Native runtime boundary
+
+The default quick-start runs with local .NET and approved public fixtures. It does not require licensed CAD software.
+
+Native examples are intentionally optional:
+
+- `native/microstation-python/dgn_package_audit.py`: MicroStation Python sketch for a configured MicroStation environment.
+- `native/microstation-dotnet/CadGuardianDgnAudit.cs`: .NET-style SDK adapter boundary for `DgnFile`, `DgnModel`, elements, levels, cells, references, seed file policy, and export readiness.
+
+Use C# for package readiness first. Move a rule into MicroStation Python or a native SDK adapter only after seed, level, reference, and export policy are accepted.
 
 ## Public fixture boundary
 
-Only approved public sample files are bundled. No client files, private drawings, credentials, raw opportunity notes, or license-uncertain CAD assets are included.
+Only approved public sample files are bundled:
+
+- `fixtures/public/gdal/smalltest.dgn`: DGN package-presence fixture from OSGeo GDAL test data.
+- `fixtures/public/gdal/seed_2d.dgn`: seed-file conversation fixture from OSGeo GDAL test data.
+
+No private names, credentials, private drawings/files, raw opportunity notes, or unapproved DGN/CAD fixtures belong in this repo.

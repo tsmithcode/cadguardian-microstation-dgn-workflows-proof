@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">MicroStation DGN Workflow Quick-Start Kit social preview</title>
+  <desc id="desc">CAD Guardian branded preview with service lane, proof decision, and run command.</desc>
+  <rect width="1280" height="640" fill="#05070b"/>
+  <path d="M0 0h1280v640H0z" fill="#05070b"/>
+  <path d="M0 0h1280v260H0z" fill="#0b1520"/>
+  <path d="M0 0h1280v640H0z" fill="none" stroke="#2dd4bf" stroke-width="10"/>
+  <path d="M72 84h128v128H72z" fill="#020305" stroke="#2dd4bf" stroke-width="3"/>
+  <path d="M100 166l36-76 36 76h-26l-10-23-10 23z" fill="#f8fafc"/>
+  <path d="M136 106l-13 29h26z" fill="#2dd4bf"/>
+  <text x="232" y="112" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="4">CAD GUARDIAN</text>
+  <text x="232" y="164" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="900">MicroStation DGN</text>
+  <text x="232" y="232" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900">Workflow Quick-Start Kit</text>
+  <rect x="72" y="306" width="548" height="190" rx="8" fill="#101827" stroke="#334155"/>
+  <text x="104" y="356" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">SERVICE LANE</text>
+  <text x="104" y="404" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="850">MicroStation DGN Workflows</text>
+  <text x="104" y="454" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="25">Seed files, levels, cells, references, export risk.</text>
+  <rect x="660" y="306" width="548" height="190" rx="8" fill="#101827" stroke="#334155"/>
+  <text x="692" y="356" fill="#2dd4bf" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">PROOF DECISION</text>
+  <text x="692" y="404" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="850">Decide whether a native</text>
+  <text x="692" y="446" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="850">MicroStation adapter is justified.</text>
+  <rect x="72" y="534" width="1136" height="58" rx="8" fill="#f8fafc"/>
+  <text x="104" y="573" fill="#071018" font-family="SFMono-Regular, Consolas, monospace" font-size="28" font-weight="700">npm run doctor &amp;&amp; npm run verify &amp;&amp; npm run demo</text>
+</svg>
