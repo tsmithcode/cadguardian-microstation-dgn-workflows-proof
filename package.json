@@ -1,6 +1,18 @@
 {
   "name": "cadguardian-microstation-dgn-workflows-proof",
   "version": "3.0.0",
+  "description": "CAD Guardian public runnable MicroStation DGN workflow evaluation kit for seed, level, reference, export, and drawing package automation consulting.",
+  "keywords": [
+    "cadguardian",
+    "cad-automation",
+    "microstation",
+    "dgn",
+    "bentley",
+    "drawing-automation",
+    "engineering-workflow",
+    "naics-541512",
+    "sic-7373"
+  ],
   "private": false,
   "type": "module",
   "scripts": {

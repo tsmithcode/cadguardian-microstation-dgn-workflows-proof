@@ -1,16 +1,26 @@
 <p align="left">
-  <a href="https://www.cadguardian.com/services/microstation-dgn-workflows">
+  <a href="https://www.cadguardian.com/microstation-automation-consulting">
     <img src="assets/cad-guardian-logo-highlighted.png" alt="CAD Guardian logo" width="120">
   </a>
 </p>
 
-# MicroStation DGN Workflow Quick-Start Kit
+# MicroStation DGN Workflow Public Runnable Evaluation Kit
 
-Enterprise-facing public proof for CAD Guardian's [MicroStation DGN workflow service](https://www.cadguardian.com/services/microstation-dgn-workflows).
+Enterprise-facing public evaluation kit for CAD Guardian's [MicroStation automation consulting](https://www.cadguardian.com/microstation-automation-consulting) and drawing package governance work.
 
 This repo proves a small, inspectable DGN package-readiness workflow before a team exposes private drawings, licensed MicroStation runtimes, or production automation.
 
 Live proof page: [GitHub Pages](https://tsmithcode.github.io/cadguardian-microstation-dgn-workflows-proof/) | [Download ZIP](https://github.com/tsmithcode/cadguardian-microstation-dgn-workflows-proof/archive/refs/heads/main.zip) | [CAD Guardian](https://www.cadguardian.com/) | [TSmithCode.ai](https://www.tsmithcode.ai/)
+
+## CAD Guardian procurement fit
+
+- Legal/procurement entity: CAD Guardian LLC, Delaware LLC.
+- Primary classification: NAICS 541512 Computer Systems Design Services; SIC 7373 Computer Integrated Systems Design.
+- Secondary implementation fit: NAICS 541511 Custom Computer Programming Services when the engagement includes custom software, API, desktop, reporting, or integration work.
+- Public offer fit: Drawing/Document Automation Slice; Quote Automation Prototype; Implementation Build Slice.
+- Canonical consulting paths: [MicroStation automation consulting](https://www.cadguardian.com/microstation-automation-consulting) and [drawing package automation consulting](https://www.cadguardian.com/drawing-package-automation-consulting).
+- Public runnable proof kit available; private customer artifacts are not exposed.
+- GitHub social preview asset: `assets/github-social-preview.png` with SVG source at `assets/github-social-preview.svg`.
 
 ## Best for
 
@@ -83,7 +93,7 @@ Do not send credentials, private drawings, raw opportunity notes, client names, 
 
 ## Related CAD Guardian page
 
-[MicroStation DGN Workflows](https://www.cadguardian.com/services/microstation-dgn-workflows)
+[MicroStation automation consulting](https://www.cadguardian.com/microstation-automation-consulting) | [drawing package automation consulting](https://www.cadguardian.com/drawing-package-automation-consulting)
 
 Use that service lane when the decision involves DGN standards, seed file policy, reference attachment checks, export readiness, or MicroStation-native automation planning.
 
